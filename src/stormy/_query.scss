@@ -1,0 +1,111 @@
+$breakpoint-mobile: 360px !default;
+$breakpoint-tablet: 768px !default;
+$breakpoint-laptop: 1024px !default;
+$breakpoint-desktop: 1280px !default;
+// #region Phone
+@mixin max-phone {
+  @media only screen and (max-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
+@mixin min-phone {
+  @media only screen and (min-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
+@mixin between-phone-tablet {
+  @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin between-phone-laptop {
+  @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-laptop) {
+    @content;
+  }
+}
+
+@mixin between-phone-desktop {
+  @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+// #endregion
+// #region Tablet
+@mixin max-tablet {
+  @media only screen and (max-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin min-tablet {
+  @media only screen and (min-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin between-tablet-laptop {
+  @media only screen and (min-width: $breakpoint-tablet) and (max-width: $breakpoint-laptop) {
+    @content;
+  }
+}
+
+@mixin between-tablet-desktop {
+  @media only screen and (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+// #endregion Tablet
+// #region Laptop
+@mixin max-laptop {
+  @media only screen and (max-width: $breakpoint-laptop) {
+    @content;
+  }
+}
+
+@mixin min-laptop {
+  @media only screen and (min-width: $breakpoint-laptop) {
+    @content;
+  }
+}
+
+@mixin between-laptop-desktop {
+  @media only screen and (min-width: $breakpoint-laptop) and (max-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+// #endregion Laptop
+// #region Desktop
+@mixin max-desktop {
+  @media only screen and (max-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+@mixin min-desktop {
+  @media only screen and (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+// #endregion Desktop
+// #region Custom
+@mixin max-custom($breakpoint) {
+  @media only screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin min-custom($breakpoint) {
+  @media only screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin between-custom($breakpoint-start, $breakpoint-end) {
+  @media only screen and (min-width: $breakpoint-start) and (max-width: $breakpoint-end) {
+    @content;
+  }
+}
+// #endregion

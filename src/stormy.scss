@@ -1,0 +1,205 @@
+// #region Flex
+@mixin flex {
+  display: flex;
+}
+
+@mixin flex-row {
+  @include flex();
+  flex-direction: row;
+}
+
+@mixin flex-col {
+  @include flex();
+  flex-direction: column;
+}
+
+@mixin flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-col-center {
+  @include flex-col();
+  @include flex-center();
+}
+
+@mixin flex-row-center {
+  @include flex-row();
+  @include flex-center();
+}
+// #endregion
+
+// #region Shadows
+// Copied straight from Tailwind with no shame Ü
+@mixin shadow-sm {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+@mixin shadow {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+@mixin shadow-md {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+@mixin shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+@mixin shadow-xl {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+@mixin shadow-2xl {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+@mixin shadow-inner {
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+}
+
+@mixin shadow-none {
+  box-shadow: 0 0 #000000;
+}
+
+// #endregion
+
+// #region Rounding
+@mixin rounded-none {
+  border-radius: 0;
+}
+
+@mixin rounded-sm {
+  border-radius: 0.125rem;
+}
+
+@mixin rounded {
+  border-radius: 0.25rem;
+}
+
+@mixin rounded-md {
+  border-radius: 0.375rem;
+}
+
+@mixin rounded-lg {
+  border-radius: 0.5rem;
+}
+
+@mixin rounded-xl {
+  border-radius: 0.75rem;
+}
+
+@mixin rounded-2xl {
+  border-radius: 1rem;
+}
+
+@mixin rounded-3xl {
+  border-radius: 1.5rem;
+}
+
+@mixin rounded-full {
+  border-radius: 9999px;
+}
+
+@mixin rounded-t-none {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+@mixin rounded-r-none {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+@mixin rounded-b-none {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+@mixin rounded-l-none {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+// #endregion
+
+// #region Fonts
+@mixin font-system {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+@mixin font-weight-light {
+  font-weight: 300;
+}
+
+@mixin font-weight-normal {
+  font-weight: 400;
+}
+
+@mixin font-weight-semibold {
+  font-weight: 600;
+}
+
+@mixin font-weight-bold {
+  font-weight: 700;
+}
+// #endregion
+
+// #region Text
+// #region Size
+@mixin text-size-xs {
+  font-size: 0.6rem;
+}
+@mixin text-size-sm {
+  font-size: 0.85rem;
+}
+@mixin text-size-base {
+  font-size: 1rem;
+}
+@mixin text-size-md {
+  font-size: 1.15rem;
+}
+@mixin text-size-lg {
+  font-size: 1.25rem;
+}
+@mixin text-size-xl {
+  font-size: 1.5rem;
+}
+// #endregion
+// #region Containers
+@mixin text-container {
+  max-width: 60ch;
+  line-height: 1.5rem;
+}
+@mixin text-container-small {
+  max-width: 35ch;
+  line-height: 1.5rem;
+}
+// #endregion
+// #region Alignment
+@mixin text-align-center {
+  text-align: center;
+}
+@mixin text-align-left {
+  text-align: start;
+}
+@mixin text-align-right {
+  text-align: end;
+}
+@mixin text-align-justify {
+  text-align: justify;
+}
+//#endregion
+// #endregion
+
+// #region Utilities
+@mixin no-margin-padding {
+  margin: 0;
+  padding: 0;
+}
+// #endregion

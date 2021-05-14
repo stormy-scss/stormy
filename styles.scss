@@ -1,0 +1,66 @@
+@use "src/stormy" as stormy;
+@use "src/stormy/components" as stormy-components;
+@use "src/stormy/container" as stormy-container;
+@use "src/stormy/query" as stormy-query;
+
+:root {
+  @include stormy.font-system();
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+#app > section {
+  @include stormy-container.container();
+  margin: 1rem auto;
+}
+
+.button,
+.button-primary {
+  @include stormy-components.button(blue, white);
+}
+
+.button-outlined,
+.button-primary-outlined {
+  @include stormy-components.button-outlined(blue);
+}
+
+.button-secondary {
+  @include stormy-components.button(orangered, white);
+}
+
+.button-rounded {
+  @include stormy.rounded-full();
+}
+
+.button-no-animation {
+  @include stormy-components.disable-animation-button;
+}
+
+.card {
+  @include stormy.shadow-md();
+  @include stormy.rounded();
+  @include stormy.text-container();
+  padding: 0.5rem 0.75rem;
+  border: 1px solid grey;
+
+
+  & > * {
+    @include stormy.no-margin-padding();
+  }
+  & > .title {
+    @include stormy.text-size-xl();
+    @include stormy.text-align-center();
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  & > .subtitle {
+    @include stormy.text-size-md();
+    @include stormy.text-align-center();
+    @include stormy.font-weight-semibold();
+    color: grey;
+  }
+
+}

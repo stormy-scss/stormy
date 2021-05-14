@@ -1,0 +1,35 @@
+$breakpoint-mobile: 360px !default;
+$breakpoint-tablet: 768px !default;
+$breakpoint-laptop: 1024px !default;
+$breakpoint-desktop: 1280px !default;
+@use "query" as stormy-query with (
+  $breakpoint-mobile: $breakpoint-mobile,
+  $breakpoint-tablet: $breakpoint-tablet,
+  $breakpoint-laptop: $breakpoint-laptop,
+  $breakpoint-desktop: $breakpoint-desktop,
+);
+
+@mixin container-tablet {
+  max-width: $breakpoint-mobile + 1px;
+}
+
+@mixin container-laptop {
+  max-width: $breakpoint-tablet + 1px;
+}
+
+@mixin container-desktop {
+  max-width: $breakpoint-laptop + 1px;
+}
+
+@mixin container {
+  width: 100%;
+  @include stormy-query.min-tablet {
+    @include container-tablet;
+  }
+  @include stormy-query.min-laptop {
+    @include container-laptop;
+  }
+  @include stormy-query.min-desktop {
+    @include container-desktop;
+  }
+}

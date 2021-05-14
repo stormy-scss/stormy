@@ -1,0 +1,48 @@
+@use "../stormy" as *;
+
+@mixin button($background, $text) {
+  @include rounded();
+  @include shadow();
+  @include text-size-base();
+  padding: 0.5rem 1rem;
+  background: $background;
+  color: $text;
+  // For outlined variant
+  border: 2px solid transparent;
+  transition: 0.15s ease-in;
+  transition-property: box-shadow, color, background-color, transform;
+
+  &:hover {
+    @include shadow-md();
+    background: lighten($color: $background, $amount: 20%);
+    transform: scale(102.5%);
+  }
+
+  &:focus {
+    outline: 2px solid transparentize($color: $background, $amount: 0.5%);
+    outline-offset: 2px;
+  }
+
+  &:active {
+    background: darken($color: $background, $amount: 20%);
+    transform: scale(98.5%);
+    transition-duration: 0.05s;
+  }
+}
+
+@mixin button-outlined($color) {
+  @include button($color, white);
+  border-color: $color;
+  color: $color;
+  background: transparent;
+  &:hover {
+    background: transparent;
+  }
+  &:active {
+    background: transparent;
+  }
+}
+
+@mixin disable-animation-button {
+  transition: none;
+}

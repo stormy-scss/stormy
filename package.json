@@ -1,0 +1,30 @@
+{
+  "name": "stormy-scss",
+  "version": "0.1.0",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/stormy.scss",
+      "require": "./dist/stormy.scss"
+    },
+    "./": {
+      "import": "./dist/stormy/",
+      "require": "./dist/stormy/"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "node ./scripts/build.js",
+    "build-vite": "vite build",
+    "serve": "vite preview",
+    "prepublishOnly": "pnpm run build"
+  },
+  "devDependencies": {
+    "fs-extra": "^10.0.0",
+    "rimraf": "^3.0.2",
+    "sass": "^1.32.13",
+    "vite": "^2.3.0"
+  }
+}
