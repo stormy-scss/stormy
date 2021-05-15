@@ -3,9 +3,10 @@
 @use "src/stormy/container" as stormy-container;
 @use "src/stormy/query" as stormy-query;
 @use "src/stormy/text" as stormy-text;
+@include stormy-text.google-font("Roboto");
 
 :root {
-  @include stormy-text.family-system();
+  @include stormy-text.family-roboto();
 }
 *,
 *::before,
