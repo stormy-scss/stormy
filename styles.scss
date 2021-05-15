@@ -5,7 +5,7 @@
 @use "src/stormy/text" as stormy-text;
 
 :root {
-  @include stormy.font-system();
+  @include stormy-text.family-system();
 }
 *,
 *::before,
@@ -60,7 +60,7 @@
   & > .subtitle {
     @include stormy-text.size-md();
     @include stormy-text.align-center();
-    @include stormy.font-weight-semibold();
+    @include stormy-text.weight-semibold();
     color: grey;
   }
 

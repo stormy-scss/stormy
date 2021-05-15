@@ -44,3 +44,56 @@
   align: justify;
 }
 //#endregion
+
+// #region Families
+@mixin family-system {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+@mixin family-sans-serif {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@mixin family-serif {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+@mixin family-mono {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+@mixin family-roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+@mixin family-roboto-mono {
+  font-family: "Roboto Mono", monospace;
+}
+
+@mixin family-custom($fonts...) {
+  font-family: $fonts;
+}
+
+@mixin google-font($family) {
+  @import url("https://fonts.googleapis.com/css?family=#{$family}");
+}
+// #endregion
+
+// #region Weight
+@mixin weight-light {
+  font-weight: 300;
+}
+
+@mixin weight-normal {
+  font-weight: 400;
+}
+
+@mixin weight-semibold {
+  font-weight: 600;
+}
+
+@mixin weight-bold {
+  font-weight: 700;
+}
+// #endregion
