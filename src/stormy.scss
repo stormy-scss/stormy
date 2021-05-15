@@ -150,52 +150,6 @@
 }
 // #endregion
 
-// #region Text
-// #region Size
-@mixin text-size-xs {
-  font-size: 0.6rem;
-}
-@mixin text-size-sm {
-  font-size: 0.85rem;
-}
-@mixin text-size-base {
-  font-size: 1rem;
-}
-@mixin text-size-md {
-  font-size: 1.15rem;
-}
-@mixin text-size-lg {
-  font-size: 1.25rem;
-}
-@mixin text-size-xl {
-  font-size: 1.5rem;
-}
-// #endregion
-// #region Containers
-@mixin text-container {
-  max-width: 60ch;
-  line-height: 1.5rem;
-}
-@mixin text-container-small {
-  max-width: 35ch;
-  line-height: 1.5rem;
-}
-// #endregion
-// #region Alignment
-@mixin text-align-center {
-  text-align: center;
-}
-@mixin text-align-left {
-  text-align: start;
-}
-@mixin text-align-right {
-  text-align: end;
-}
-@mixin text-align-justify {
-  text-align: justify;
-}
-//#endregion
-// #endregion
 
 // #region Utilities
 @mixin no-margin-padding {

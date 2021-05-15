@@ -1,9 +1,10 @@
 @use "../stormy" as *;
+@use "text" as text;
 
 @mixin button($background, $text) {
   @include rounded();
   @include shadow();
-  @include text-size-base();
+  @include text.size-base();
   padding: 0.5rem 1rem;
   background: $background;
   color: $text;

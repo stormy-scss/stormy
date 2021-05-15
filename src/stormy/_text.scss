@@ -1,0 +1,46 @@
+// #region Size
+@mixin size-xs {
+  font-size: 0.6rem;
+}
+@mixin size-sm {
+  font-size: 0.85rem;
+}
+@mixin size-base {
+  font-size: 1rem;
+}
+@mixin size-md {
+  font-size: 1.15rem;
+}
+@mixin size-lg {
+  font-size: 1.25rem;
+}
+@mixin size-xl {
+  font-size: 1.5rem;
+}
+// #endregion
+
+// #region Containers
+@mixin text-container {
+  max-width: 60ch;
+  line-height: 1.5rem;
+}
+@mixin text-container-small {
+  max-width: 35ch;
+  line-height: 1.5rem;
+}
+// #endregion
+
+// #region Alignment
+@mixin align-center {
+  align: center;
+}
+@mixin align-left {
+  align: start;
+}
+@mixin align-right {
+  align: end;
+}
+@mixin align-justify {
+  align: justify;
+}
+//#endregion
